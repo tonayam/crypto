@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Faqs from "./pages/faqs/Faqs";
+import TermsCondition from "./pages/terms/TermsCondition";
+import AffiliateProgram from "./pages/affiliate/AffiliateProgram";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+import Contact from "./pages/contact/Contact";
+import CookiesPolicy from "./pages/cookies/CookiesPolicy";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <main>
+        <Navbar />
+        <Routes>
+          <Route path='/' exact element={<Home />} />
+          <Route path='/about-us' element={<About />} />
+          <Route path='/faqs' element={<Faqs />} />
+          <Route path='/terms-and-conditions' element={<TermsCondition />} />
+          <Route path='/affiliate-program' element={<AffiliateProgram />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/contact-us' element={<Contact />} />
+          <Route path='/cookies-policy' element={<CookiesPolicy />} />
+        </Routes>
+        <Footer />
+      </main>
+    </>
   );
 }
 

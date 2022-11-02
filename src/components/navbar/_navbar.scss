@@ -1,0 +1,115 @@
+.nav {
+    @include flexCB;
+    padding: 0 15px;
+    height: 80px;
+
+    &-logo {
+        width: 205px;
+        height: 66px;
+    }
+
+    .hambugger-menu {
+        @include flexCC;
+        width: 40px;
+        height: 40px;
+
+        .icon {
+            height: 80%;
+            width: 80%;
+            color: #707985;
+        }
+    }
+
+    &-items {
+        &-links {
+
+            li {
+                margin: 20px 0px;
+
+                &:hover {
+                    color: #1f65c0;
+                }
+            }
+        }
+
+        &-btns {
+            button {
+
+                &:last-child {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+
+}
+
+.mob-nav-items {
+    padding-left: 15px;
+    height: calc(100vh - 80px);
+    transform: translateX(-100%);
+    transition: $generalTransition;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: $whiteColor;
+
+    &.show {
+        transform: translateX(0);
+    }
+
+}
+
+@include for-phone-only {
+    .nav {
+        &-logo {
+            width: 180px;
+            height: 55px;
+            @include flexCC;
+
+            img {
+                width: 80%;
+                height: 80%
+            }
+        }
+    }
+}
+
+@include for-tablet-potrait-up {}
+
+@include for-tablet-landscape-up {}
+
+@include for-desktop-up {
+    .nav {
+        padding: 30px 60px;
+        height: 125px;
+
+        &-items {
+            @include flexCC;
+
+            &-links {
+                @include flexCB;
+
+                li {
+                    margin: 0 40px;
+
+                    &:hover {
+                        color: #1f65c0;
+                    }
+                }
+            }
+
+            &-btns {
+                @include flexCC;
+
+                button {
+                    margin: 0 10px;
+                }
+            }
+        }
+
+    }
+}
+
+@include for-big-desktop-up {}

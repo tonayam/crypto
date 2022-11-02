@@ -1,0 +1,51 @@
+.footer {
+    padding: 20px 15px;
+
+    &-grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+
+        &-item {
+
+            .footer-logo {
+                width: 205px;
+                height: 66px;
+            }
+
+            p {
+                margin-top: 20px;
+            }
+
+            .footer-nav {
+                display: flex;
+                height: 150px;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                li {
+                    margin: 5px 0;
+                }
+            }
+        }
+
+    }
+}
+
+@include for-phone-only {}
+
+@include for-tablet-potrait-up {}
+
+@include for-tablet-landscape-up {}
+
+@include for-desktop-up {
+    .footer {
+        padding: 40px 63px;
+
+        &-grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@include for-big-desktop-up {}

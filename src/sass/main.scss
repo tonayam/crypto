@@ -1,0 +1,25 @@
+// FONT FROM GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import "./responsive";
+@import "./variables";
+@import "./custom-classes";
+@import "./styles";
+@import "./general";
+@import "./reset";
+@import "../components/navbar/navbar";
+@import "../components/footer/footer";
+@import "../pages//home/home";
+@import "../pages//about/about";
+@import "../pages/faqs/faqs";
+@import "../pages/terms/termsCondition";
+@import "../pages/affiliate/affiliateProgram";
+@import "../pages/login/login";
+@import "../pages/register/register";
+@import "../pages/contact/contact";
+@import "../pages/cookies/cookiesPolicy";
+
+section {
+    height: 100vh;
+    background: #EEEEEE;
+}

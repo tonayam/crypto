@@ -1,0 +1,37 @@
+$theme-color: #0f477b;
+$secondary-color: #236aab;
+$whiteColor: #fff;
+$generalTransition: 0.5s ease-in-out all;
+$boxShadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+@mixin flexC {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexJ {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flexCC {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexCB {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// UTILITY CLASSES
+
+
+
+.center {
+    height: 100vh;
+    width: 100%;
+    @include flexCC;
+}
