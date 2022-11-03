@@ -10,8 +10,17 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Contact from "./pages/contact/Contact";
 import CookiesPolicy from "./pages/cookies/CookiesPolicy";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [windowWidth, setWindowWidth] = useState(``);
+
+  useEffect(() => {
+    window.addEventListener(`resize`, () => {
+      setWindowWidth(window.innerWidth);
+    });
+  }, [windowWidth]);
+
   return (
     <>
       <main>

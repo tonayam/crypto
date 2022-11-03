@@ -43,7 +43,6 @@
 
             li {
                 margin: 20px 0px;
-                width: 50%;
 
                 &:hover {
                     color: #1f65c0;
@@ -66,7 +65,6 @@
 
 .mob-nav-items {
     padding-left: 15px;
-    // height: calc(100vh - 80px);
     transform: translateX(-100%);
     transition: $generalTransition;
     position: fixed;
@@ -75,6 +73,7 @@
     left: 0;
     bottom: 0;
     background: $whiteColor;
+    padding-top: 10px;
 
 
     &.show {
@@ -113,6 +112,7 @@
 
             &-links {
                 @include flexCB;
+                flex-direction: row;
 
                 li {
                     margin: 0 40px;
