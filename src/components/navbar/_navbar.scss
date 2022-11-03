@@ -3,6 +3,7 @@
     padding: 0 15px;
     height: 80px;
 
+
     &-logo {
         width: 205px;
         height: 66px;
@@ -20,11 +21,29 @@
         }
     }
 
+    &-close {
+        margin-top: 20px;
+        display: inline-flex;
+        float: right;
+        padding: 0 1rem;
+
+
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+
     &-items {
+
         &-links {
+            display: flex;
+            flex-direction: column;
 
             li {
                 margin: 20px 0px;
+                width: 50%;
 
                 &:hover {
                     color: #1f65c0;
@@ -47,16 +66,20 @@
 
 .mob-nav-items {
     padding-left: 15px;
-    height: calc(100vh - 80px);
+    // height: calc(100vh - 80px);
     transform: translateX(-100%);
     transition: $generalTransition;
-    position: absolute;
+    position: fixed;
+    top: 0;
     right: 0;
     left: 0;
+    bottom: 0;
     background: $whiteColor;
+
 
     &.show {
         transform: translateX(0);
+        z-index: 5;
     }
 
 }

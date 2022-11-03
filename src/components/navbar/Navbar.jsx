@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../../assets/header__logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { navLinks } from "../../data/links";
+import { useGlobalContext } from "../context/Context";
 
 const Navbar = () => {
-  const [showNavbar, setShowNavbar] = useState(false);
+  const { showNavbar, setShowNavbar } = useGlobalContext();
 
   return window.innerWidth >= 1200 ? (
     <nav className='nav'>
@@ -43,19 +44,15 @@ const Navbar = () => {
             <img src={logo} alt='logo' />
           </Link>
         </div>
-        <div
-          className='hambugger-menu'
-          onClick={() => setShowNavbar(!showNavbar)}
-        >
-          {showNavbar ? (
-            <FaTimes className='icon' />
-          ) : (
-            <FaBars className='icon' />
-          )}
+        <div className='hambugger-menu' onClick={() => setShowNavbar(true)}>
+          <FaBars className='icon' />
         </div>
       </nav>
       <div className={`mob-nav-items  ${showNavbar && `show`}`}>
         <div className='nav-items'>
+          <div className='nav-close'>
+            <FaTimes className='icon' onClick={() => setShowNavbar(false)} />
+          </div>
           <ul className='nav-items-links'>
             {navLinks.map((link, index) => {
               const { name, to } = link;
