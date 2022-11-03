@@ -4,9 +4,29 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [showNavbar, setShowNavbar] = useState(false);
+  const [userRegDetails, setUserRegDetails] = useState({
+    name: ``,
+    referral: ``,
+    email: ``,
+    gender: ``,
+    password: ``,
+  });
+  const [userLoginDetails, setUserLoginDetails] = useState({
+    email: ``,
+    password: ``,
+  });
 
   return (
-    <AppContext.Provider value={{ showNavbar, setShowNavbar }}>
+    <AppContext.Provider
+      value={{
+        showNavbar,
+        setShowNavbar,
+        userRegDetails,
+        setUserRegDetails,
+        userLoginDetails,
+        setUserLoginDetails,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

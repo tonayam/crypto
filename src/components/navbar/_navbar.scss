@@ -31,6 +31,7 @@
         .icon {
             width: 40px;
             height: 40px;
+            color: #707985;
         }
     }
 
@@ -74,7 +75,7 @@
     bottom: 0;
     background: $whiteColor;
     padding-top: 10px;
-    z-index: 5;
+    z-index: 40;
 
 
     &.show {
