@@ -74,11 +74,11 @@
     bottom: 0;
     background: $whiteColor;
     padding-top: 10px;
+    z-index: 5;
 
 
     &.show {
         transform: translateX(0);
-        z-index: 5;
     }
 
 }
