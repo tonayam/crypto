@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PageHeader from "../../components/header/PageHeader";
 import { termsAndConditions } from "../../data/termsList";
 
 const TermsCondition = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
+    document.title = `Broker - Terms and Conditions`;
+  }, []);
   return (
     <section className='terms-conditions'>
       <PageHeader>Terms and Condition</PageHeader>

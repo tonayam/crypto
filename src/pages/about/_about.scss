@@ -3,9 +3,13 @@
         padding: 0 15px;
         margin-top: 40px;
 
+        &-title {
+            font-size: 1.6rem;
+        }
+
         &-sub-title {
             font-weight: 500;
-            margin-top: 20px;
+            margin-top: 10px;
         }
     }
 
@@ -32,10 +36,6 @@
 
             &-title {
                 font-size: 1.3rem;
-            }
-
-            &-sub-title {
-                margin-top: 10px;
             }
         }
 

@@ -150,9 +150,7 @@ const Register = () => {
               />
               <label htmlFor='terms-condition'>
                 I agree to <b>Triad Firm Ltd</b>{" "}
-                <a href='terms-and-conditions.html' target='_blank'>
-                  Terms and conditions
-                </a>
+                <Link to='/terms-and-conditions'>Terms and conditions</Link>
               </label>
             </div>
             <div className='emails-condition'>

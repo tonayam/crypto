@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PageHeader from "../../components/header/PageHeader";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
+    document.title = `Broker - About Us`;
+  }, []);
   return (
     <section className='about'>
       <PageHeader>About Us</PageHeader>
