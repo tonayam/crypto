@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PageHeader from "../../components/header/PageHeader";
 
 const AffiliateProgram = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
+    document.title = `Broker - Affiliate Program`;
+  }, []);
   return (
     <section className='affiliate-program'>
       <PageHeader>Affiliate Program</PageHeader>
