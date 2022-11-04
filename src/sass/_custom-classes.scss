@@ -105,3 +105,72 @@
     }
 
 }
+
+// CUSTOM PAGE TITILES
+
+.content-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.content-sub-title {
+    font-weight: 600;
+}
+
+.content-paragraph {
+    margin-top: 10px;
+    line-height: 30px;
+    font-size: .9rem;
+    font-weight: 200;
+}
+
+.content-list {
+    li {
+        font-size: .8rem;
+        font-weight: 200;
+        margin: 10px 0;
+    }
+}
+
+.underline {
+    border: 1px solid darkgray;
+    margin-top: 30px;
+}
+
+@include for-phone-only {
+    .content-title {
+        font-size: 1.4rem;
+    }
+
+    .content-sub-title {
+        font-size: .9rem;
+    }
+
+    .content-paragraph {
+        font-size: .8rem;
+    }
+
+    .content-list {
+        li {
+            font-size: .8rem;
+        }
+    }
+}
+
+@include for-tablet-potrait-up {
+    .content-title {
+        font-size: 2rem;
+    }
+
+    .content-list {
+        li {
+            font-size: .9rem;
+        }
+    }
+}
+
+@include for-tablet-landscape-up {}
+
+@include for-desktop-up {}
+
+@include for-big-desktop-up {}

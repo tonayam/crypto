@@ -12,6 +12,11 @@
         color: $whiteColor;
         @include flexC;
 
+        .home-link:hover {
+            text-decoration: underline;
+            color: $secondary-color;
+        }
+
         .icon {
             color: $secondary-color;
             margin: 0 10px;

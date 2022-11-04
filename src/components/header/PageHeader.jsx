@@ -6,7 +6,9 @@ const PageHeader = ({ children }) => {
   return (
     <header className='header'>
       <div className='header-navigation'>
-        <Link to='/'>Home</Link>
+        <Link to='/' className='home-link'>
+          Home
+        </Link>
         <FaChevronRight className='icon' />
         {children}
       </div>
