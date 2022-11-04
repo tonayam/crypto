@@ -21,10 +21,6 @@ const Login = () => {
     setUserLoginDetails({ ...userLoginDetails, [name]: value });
   };
 
-  if (userLoginDetails.email !== "" && userLoginDetails.password !== "") {
-    document.querySelector(`.submit-btn`).classList.remove(`inactive`);
-  }
-
   return (
     <section className='login'>
       <article className='login-modal'>
@@ -68,7 +64,7 @@ const Login = () => {
 
           <div className='password-submitBtn'>
             <p>Forgot password?</p>
-            <button className='btn btn-blue submit-btn inactive'>Login</button>
+            <button className='btn btn-blue submit-btn'>Login</button>
           </div>
         </form>
       </article>

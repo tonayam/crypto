@@ -27,22 +27,6 @@ const Register = () => {
     setUserRegDetails({ ...userRegDetails, [name]: value });
   };
 
-  const ageCheck = document.querySelector(`#age-check`);
-  const termsCheck = document.querySelector(`#terms-check`);
-
-  if (
-    userRegDetails.email !== "" &&
-    userRegDetails.name !== "" &&
-    userRegDetails.gender !== "" &&
-    userRegDetails.password !== "" &&
-    ageCheck.checked &&
-    termsCheck.checked
-  ) {
-    document.querySelector(`.submit-btn`).classList.remove(`inactive`);
-  } else {
-    document.querySelector(`.submit-btn`).classList.add(`inactive`);
-  }
-
   return (
     <section className='register'>
       <article className='register-modal'>
@@ -191,9 +175,7 @@ const Register = () => {
             <Link to='/login'>
               <p>Already have an account?</p>
             </Link>
-            <button className='btn btn-blue submit-btn inactive'>
-              Register
-            </button>
+            <button className='btn btn-blue submit-btn'>Register</button>
           </div>
         </form>
       </article>
