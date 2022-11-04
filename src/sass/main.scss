@@ -7,8 +7,13 @@
 @import "./styles";
 @import "./general";
 @import "./reset";
+
+// COMPONENTS
 @import "../components/navbar/navbar";
 @import "../components/footer/footer";
+@import "../components/header/header";
+
+// PAGES
 @import "../pages//home/home";
 @import "../pages//about/about";
 @import "../pages/faqs/faqs";
@@ -18,7 +23,3 @@
 @import "../pages/register/register";
 @import "../pages/contact/contact";
 @import "../pages/cookies/cookiesPolicy";
-
-section {
-    background: #EEEEEE;
-}

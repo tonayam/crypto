@@ -1,3 +1,96 @@
 .affiliate-program {
-    border: 2px solid blue;
+    .content {
+        margin-top: 40px;
+        padding: 0 15px;
+
+        &-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+
+        &-paragraph {
+            margin-top: 10px;
+            line-height: 30px;
+            font-size: .9rem;
+        }
+
+        &-list {
+            margin: 20px 25px;
+            list-style-type: disc;
+
+            li {
+                font-size: .8rem;
+            }
+        }
+
+        &-sub-title {
+            font-weight: 600;
+        }
+
+        .underline {
+            border: 1px solid darkgray;
+            margin-top: 30px;
+        }
+    }
+
 }
+
+
+@include for-phone-only {
+    .affiliate-program {
+        .content {
+            padding: 0 10px;
+
+            &-title {
+                font-size: 1.4rem;
+            }
+
+            &-paragraph {
+                font-size: .8rem;
+            }
+
+            &-list {
+                li {
+                    font-size: .7rem;
+                }
+            }
+
+            &-sub-title {
+                font-size: .9rem;
+            }
+
+        }
+
+    }
+}
+
+@include for-tablet-potrait-up {
+    .affiliate-program {
+        .content {
+            padding: 0 60px;
+
+            &-title {
+                font-size: 2rem;
+            }
+
+            &-paragraph {
+                line-height: 35px;
+            }
+
+            &-list {
+                margin: 20px 40px;
+
+                li {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+    }
+}
+
+@include for-tablet-landscape-up {}
+
+@include for-desktop-up {}
+
+@include for-big-desktop-up {}

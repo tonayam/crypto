@@ -1,0 +1,48 @@
+.header {
+    height: 150px;
+    width: 100%;
+    background: url(../../assets/promo__bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include flexC;
+    padding: 0 15px;
+
+    &-navigation {
+        color: $whiteColor;
+        @include flexC;
+
+        .icon {
+            color: $secondary-color;
+            margin: 0 10px;
+        }
+
+    }
+}
+
+
+@include for-phone-only {}
+
+@include for-tablet-potrait-up {
+    .header {
+        padding: 0 60px;
+    }
+}
+
+@include for-tablet-landscape-up {}
+
+@include for-desktop-up {
+    .header {
+        height: 200px;
+        background-size: 100%;
+
+        &-navigation {
+            .icon {
+                margin: 0 20px;
+            }
+
+        }
+    }
+}
+
+@include for-big-desktop-up {}

@@ -14,7 +14,7 @@ const Footer = () => {
             </Link>
           </div>
           <p>
-            © 2018 Triad Firm Ltd.
+            © 2022 Triad Firm Ltd.
             <br />
             All rights reserved.
           </p>
